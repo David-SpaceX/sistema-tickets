@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--NAV-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <img src="img/soporte.png" width="40px" class="img-thumbnail" alt="logo">
+      <a class="navbar-brand" href="#">SoportePlus</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link" href="#">Tipos de Tiquets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tiquets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Usuario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Roles</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  Contenido de cards y texto -->
+  <div class="container px-md-3" style="margin-top: 150px;">
+
+    <!--  Imagen izquierda / Texto derecha -->
+    <p class="fs-1 text-center my-5" style="color: antiquewhite; font-weight: bold;">Tiquets Generados</p>
+    <div class="row align-items-center mb-5 mt-5 pt-5 my-5 px-md-3 mx-md-3">
+      <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0 order-1 order-md-1 order-lg-1">
+        <canvas id="miGrafico" style="width: 100% !important; height: 450px !important;"></canvas>
+      </div>
+      <div class="col-12 col-md-6 text-center text-md-start order-2 order-md-2 order-lg-2 px-3 px-md-0">
+        <p class="fs-5 text-light">
+          Estos sistemas manejan elementos individuales denominados tickets, los cuales proporcionan un detalle del
+          problema a solucionar, junto con otros datos como la prioridad, el solicitante, la autorización (si la
+          requiere), etc.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--  Texto izquierda / Imagen derecha -->
+  <p class="fs-1 text-center my-5 mb-5" style="color: antiquewhite; font-weight: bold;">Estado de Tiquets</p>
+  <div class="row align-items-center mt-5 mb-5 pt-5 my-5 px-md-5 mx-md-5">
+    <div class="col-12 col-md-6 order-2 order-md-1 px-5 px-md-0 gap-2 text-center">
+      <p class="fs-5 text-light mt-5">
+        Correctamente configurado, un sistema de gestión de tickets es una excelente inversión para su empresa, ya que
+        ahorra una gran cantidad de tiempo y dinero. En la actualidad, el correo electrónico es el medio preferido para
+        solicitar soporte técnico en una organización, pero un software de tickets tiene varias ventajas sobre este
+        método convencional.
+      </p>
+    </div>
+    <div class="col-12 col-md-6 text-center text-md-end order-1 order-md-2 order-lg-2 mb-5 mb-md-5 px-3 px-md-0">
+      <canvas id="MiDona" style="width: 100%; max-width: 900px; height: 400px;"></canvas>
+    </div>
+  </div>
+
+
+  <!--titulo e imagen-->
+  <div class="titulo-imagen d-flex justify-content-center align-items-center gap-5 px-5 ms-5 mt-5 me-4">
+    <p class="text-start mb-0 fs-2 text-light">Sistemas de Tiquets</p>
+    <img src="img/img2.jpg" class="rounded" alt="titulo-imagen" width="400">
+  </div>
+
+
+  <!--texto nuestros servicios-->
+  <p class="font-monospace fs-1 text-center mt-5" style="color: antiquewhite;">Equipo de Soporte Tecnico</p>
+
+  <!--imagenes-->
+  <div class="imagen d-flex gap-5 px-5 justify-content-center">
+    <div class="col-3"><img src="img/img1.jpg" class="d-block w-100" alt=""></div>
+    <div class="col-3"><img src="img/img4.jpg" class="d-block w-100" alt=""></div>
+    <div class="col-3"><img src="img/img3.jpg" class="d-block w-100" alt=""></div>
+  </div>
+
+
+  <!--  Texto izquierda / Imagen derecha -->
+  <!--<p class="fs-1 text-center my-5 mb-5" style="color: antiquewhite; font-weight: bold;"></p>-->
+  <div class=" texto1 row align-items-center mt-5 mb-5 pt-5 my-5 px-md-5 mx-md-5">
+    <div class="col-12 col-md-6 order-2 order-md-1 px-5 px-md-0">
+      <p class="fs-5 text-light mt-5">
+        Implementar un sistema de tickets es necesario ya que, en el vertiginoso entorno empresarial de hoy en día, el
+        servicio de atención al cliente ha sido testigo de algunos cambios radicales. La adopción de nuevas herramientas
+        tecnológicas introdujo la necesidad apremiante de que las organizaciones se adapten a la velocidad para
+        garantizar una prestación de servicios sin problemas.
+      </p>
+    </div>
+    <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0 order-1 order-md-1 order-lg-1 ps-ms-3">
+      <canvas id="MiLinear" style="width: 100%; max-width: 700px; height: 400px;"></canvas>
+    </div>
+  </div>
+
+
+
+  <!--footer-->
+  <div class="container-fluid p-0">
+    <div class="footer-text card mb-0 rounded-0">
+      <div class="card-body">
+        <div class="row align-items-start">
+
+          <div class="col text-start fs-2 mt-1">
+            SoportePlus
+          </div>
+
+          <div class="col text-center">
+            <div>Contacto</div>
+            <div>Tel: 22002200</div>
+          </div>
+
+          <div class="col text-end">
+            <div>Acerca de :</div>
+            <div>Política de Privacidad</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card-footer text-body-secondary text-center">
+        Copyright © 2025 SoportePlus
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <style>
+    body {
+      overflow-x: hidden;
+      background: #0a0a23;
+      flex-direction: column;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #27298f !important;
+      padding: 15px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #00fff7 !important;
+      margin-left: 40px;
+    }
+
+    .nav-link {
+      color: antiquewhite !important;
+      margin-right: 150px;
+    }
+
+    .fs-5 {
+      color: antiquewhite;
+
+    }
+  </style>
+
+
+
+
+
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

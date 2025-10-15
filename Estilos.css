@@ -1,0 +1,142 @@
+
+/*estilos para login*/
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #27298f;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 20px #00ffff55;
+  }
+
+  .dropdown-item:hover {
+    text-decoration: underline;
+  }
+
+  /* ----------- diseno responsive ----------- */
+  @media (max-width: 768px) {
+    .login-container {
+      max-width: 60%;
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-container {
+      max-width: 70%;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .form-label {
+      font-size: 14px;
+    }
+
+    .btn {
+      font-size: 14px;
+    }
+  }
+
+
+
+  /*estilos para titulo*/
+.titulo { 
+    color: antiquewhite;
+    font-size: 50px;
+    font-weight: bold;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+  }
+
+
+  @media (max-width: 992px) {
+    .titulo {
+        font-size: 2rem;
+    }
+  }
+
+    @media (max-width: 768px) {
+    .titulo {
+      font-size: 2rem; /* más pequeño en tablet/móvil */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .titulo {
+      font-size: 1.2rem; /* aún más pequeño en móviles */
+    }
+  }
+
+
+
+
+
+/*nav*/
+.navbar {
+    background-color: #27298f !important;
+}
+
+.nav-collapse:hover {
+  transition: max-height 1.5s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.nav-collapse.show {
+  max-height: 500px;
+}
+
+
+
+/*estilos para imagen y texto de sistema de tiquets*/
+.titulo-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; /* espacio entre texto e imagen */
+  padding: 0 2rem; /* padding lateral */
+  font-weight: 900;
+}
+
+/* Imagen más pequeña en laptops */
+@media (max-width: 1200px) {
+  .titulo-imagen img {
+    width: 250px;
+  }
+  .titulo-imagen {
+    gap: 5rem;
+    padding: 0 1rem;
+    margin-top: 20px;
+  }
+}
+
+/* texto arriba, imagen abajo */
+@media (max-width: 768px) {
+  .titulo-imagen {
+    flex-direction: column;
+    text-align: center;  
+    padding: 0 0.5rem;       
+    gap: 5rem;              
+  }
+
+  .titulo-imagen img {
+    width: 300px;
+  }
+
+  .titulo-imagen p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+
+/*estilos para card de nuestros servicios*/
+.imagen img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
